@@ -3,7 +3,8 @@ COLORS
 *****************************/
 /*https://coolors.co/095256-087f8c-5aaa95-86a873-bb9f06*/
 /*https://codepen.io/blackratio/pen/usrBn*/
-/*https://variationsguide.typenetwork.com/   decode the font axes settings*/
+/*https://variationsguide.typenetwork.com/   decode the font axes settings
+https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts*/
 
 section:nth-child(1) {
   background: rgba(9, 82, 86, 1);
@@ -106,7 +107,7 @@ section:nth-child(4) {
   overflow: hidden;
 
   animation:  wacky infinite;
-  animation-duration: 5s;
+  animation-duration: 9s;
   animation-timing-function: ease;
   font-size: 12vh;
   margin: 0 auto;
