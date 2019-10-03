@@ -19,7 +19,7 @@ section:nth-child(1) {
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
-
+/************** TITLE PAGE *************/
 section:nth-child(1) h1{
   font-size: 10vw;
   line-height: 0.1;
@@ -58,6 +58,8 @@ section:nth-child(1) h1{
     /*font-variation-settings: "wght" 63, "wdth" 402, "opsz" 61.4, "XOPQ" 117, "XTRA" 402, "YOPQ" 45, "YTLC" 600, "YTSE" 9.5, "GRAD" 90, "YTAS" 750, "YTDE" 250, "YTUC" 795, "YTRA" 900, "PWGT" 92, "PWDT" 402;
 */   font-variation-settings: "wght" 80, "wdth" 356, "opsz" 25.1, "XOPQ" 222, "XTRA" 402, "YOPQ" 14.6, "YTLC" 600, "YTSE" 9.5, "GRAD" 90, "YTAS" 750, "YTDE" 250, "YTUC" 795, "YTRA" 900, "PWGT" 92, "PWDT" 402;
 }
+
+/************** MONSTER FONT DEMO *************/
 section:nth-child(2) {
   background: rgba(8, 127, 140, 1);
 }
@@ -74,8 +76,16 @@ section:nth-child(2) {
   margin-right: auto;
 }
 
+/************** REGULAR FONT DEMO *************/
 section:nth-child(3) {
   background: rgba(90, 170, 149, 1);
+}
+
+.standardFont h1{
+  font-family: "Recursive", "Adobe NotDef";
+  font-size: 7vw;
+  line-height: 0.5;
+  /*font-variation-settings: "PROP" 0, "XPRN" 0, "wght" 300, "slnt" -15, "ital" 0.01;*/
 }
 
 section:nth-child(4) {
@@ -201,4 +211,9 @@ p {
 @font-face {
   font-family: "This Man This Monster";
   src: url(./fonts/CCThisManThisMonsterGX.woff2);
+}
+
+@font-face {
+  src: url('./fonts/recursive.woff2');
+  font-family:'Recursive';
 }

@@ -31,26 +31,66 @@ const chewSlider = document.getElementById("this-man-this-monster-CHEW"),
 	monsterHeaderTop = document.getElementById("monsterHeaderTop"),
 	monsterHeaderBtm = document.getElementById("monsterHeaderBtm");
 
-const updateFontVariationSettings = function() {
+const proportionSlider = document.getElementById("recursive-PROP"),
+	expressionSlider = document.getElementById("recursive-XPRN"),
+	weightSlider = document.getElementById("recursive-wght"),
+	slantSlider = document.getElementById("recursive-slnt"),
+	italicSlider = document.getElementById("recursive-ital"),
+	standardHeaderTop = document.getElementById("standardHeaderTop"),
+	standardHeaderBtm = document.getElementById("standardHeaderBtm");
+
+const monsterUpdateFontVariationSettings = function() {
 	let ths = this,
 		chew = chewSlider.value,
 		wonk = wonkSlider.value,
 		bite = biteSlider.value,
 		updatedFontVarSettings = `"CHEW" ${chew}, "WONK" ${wonk}, "BITE" ${bite}`;
 
-	console.log(this.value);
 	monsterHeaderTop.style.fontVariationSettings = updatedFontVarSettings;
 	monsterHeaderBtm.style.fontVariationSettings = updatedFontVarSettings;
 };
 
 chewSlider.oninput = function() {
-	updateFontVariationSettings();
+	monsterUpdateFontVariationSettings();
 };
 
 wonkSlider.oninput = function() {
-	updateFontVariationSettings();
+	monsterUpdateFontVariationSettings();
 };
 
 biteSlider.oninput = function() {
-	updateFontVariationSettings();
+	monsterUpdateFontVariationSettings();
+};
+
+const standardUpdateFontVariationSettings = function() {
+	let ths = this,
+		prop = proportionSlider.value,
+		expr = expressionSlider.value,
+		weight = weightSlider.value,
+		slant = slantSlider.value,
+		ital = italicSlider.value,
+		updatedFontVarSettings = `"PROP" ${prop}, "XPRN" ${expr}, "wght" ${weight}, "slnt" ${slant}, "ital" ${ital}`;
+
+	standardHeaderTop.style.fontVariationSettings = updatedFontVarSettings;
+	standardHeaderBtm.style.fontVariationSettings = updatedFontVarSettings;
+};
+
+proportionSlider.oninput = function() {
+	standardUpdateFontVariationSettings();
+};
+
+expressionSlider.oninput = function() {
+	standardUpdateFontVariationSettings();
+};
+
+weightSlider.oninput = function() {
+	standardUpdateFontVariationSettings();
+};
+
+slantSlider.oninput = function() {
+	standardUpdateFontVariationSettings();
+};
+
+italicSlider.oninput = function() {
+	standardUpdateFontVariationSettings();
 };
