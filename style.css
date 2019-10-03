@@ -87,9 +87,31 @@ section:nth-child(3) {
   line-height: 0.5;
   /*font-variation-settings: "PROP" 0, "XPRN" 0, "wght" 300, "slnt" -15, "ital" 0.01;*/
 }
-
+/************** END ANIMATION *************/
 section:nth-child(4) {
   background: rgba(134, 168, 115, 1);
+}
+@keyframes wacky  {
+  0%   {font-variation-settings: "wght" 100, "wdth" 50 ; }
+  25%   {font-variation-settings: "wght" 100, "wdth" 200; }
+  50%   {font-variation-settings: "wght" 900, "wdth" 200; }
+  75%   {font-variation-settings: "wght" 900, "wdth" 50;  }
+  100% {font-variation-settings: "wght" 100, "wdth" 50 ;}
+}
+
+.thanks {
+  font-family: "etc-trispace", "Adobe NotDef";
+  text-rendering: geometricPrecision;
+  text-align: center;
+  overflow: hidden;
+
+  animation:  wacky infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  font-size: 12vh;
+  margin: 0 auto;
+  line-height: 1;
+  font-weight: normal;
 }
 
 body, html {
@@ -216,4 +238,9 @@ p {
 @font-face {
   src: url('./fonts/recursive.woff2');
   font-family:'Recursive';
+}
+
+@font-face {
+  src: url('./fonts/ETCTrispaceVariable.woff2');
+  font-family:'etc-trispace';
 }
