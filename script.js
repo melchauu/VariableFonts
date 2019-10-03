@@ -24,3 +24,33 @@ $(".main").onepage_scroll({
    loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
    responsiveFallback: 600 // You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
 });
+
+const chewSlider = document.getElementById("this-man-this-monster-CHEW"),
+	wonkSlider = document.getElementById("this-man-this-monster-WONK"),
+	biteSlider = document.getElementById("this-man-this-monster-BITE"),
+	monsterHeaderTop = document.getElementById("monsterHeaderTop"),
+	monsterHeaderBtm = document.getElementById("monsterHeaderBtm");
+
+const updateFontVariationSettings = function() {
+	let ths = this,
+		chew = chewSlider.value,
+		wonk = wonkSlider.value,
+		bite = biteSlider.value,
+		updatedFontVarSettings = `"CHEW" ${chew}, "WONK" ${wonk}, "BITE" ${bite}`;
+
+	console.log(this.value);
+	monsterHeaderTop.style.fontVariationSettings = updatedFontVarSettings;
+	monsterHeaderBtm.style.fontVariationSettings = updatedFontVarSettings;
+};
+
+chewSlider.oninput = function() {
+	updateFontVariationSettings();
+};
+
+wonkSlider.oninput = function() {
+	updateFontVariationSettings();
+};
+
+biteSlider.oninput = function() {
+	updateFontVariationSettings();
+};
