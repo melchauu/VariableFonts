@@ -50,6 +50,10 @@ const monsterUpdateFontVariationSettings = function() {
 	monsterHeaderBtm.style.fontVariationSettings = updatedFontVarSettings;
 };
 
+function animatedThanks(){
+	document.getElementById('thankyou').classList.add('animate');
+}
+
 chewSlider.oninput = function() {
 	monsterUpdateFontVariationSettings();
 };
